@@ -11,12 +11,12 @@ using System.Windows.Forms;
 namespace Lab1
 {
 
-    public partial class Form1 : Form
+    public partial class LanguageProcessorForm : Form
     {
         private DefaultDialogService dialogService;
         private DefaultFileService fileService;
         private string currentData = "";
-        public Form1()
+        public LanguageProcessorForm()
         {
             InitializeComponent();
             dialogService = new DefaultDialogService();
@@ -25,7 +25,7 @@ namespace Lab1
 
         private void StripMenuAbout_Click(object sender, EventArgs e)
         {
-            var aboutWindow = new Form2();
+            var aboutWindow = new AboutForm();
             aboutWindow.Show();
         }
 
@@ -40,6 +40,7 @@ namespace Lab1
             currentData = fileService.ReadFile(dialogService.FilePath);
 
             textBox1.Text = currentData;
+            this.Text = "Language Processor - " + dialogService.FilePath;
         }
 
         private void StripMenuSave_Click(object sender, EventArgs e)
@@ -52,6 +53,8 @@ namespace Lab1
         {
             currentData = textBox1.Text;
             dialogService.SaveFileDialog();
+            fileService.SaveFile(dialogService.FilePath, currentData);
+            this.Text = "Language Processor - " + dialogService.FilePath;
         }
 
         private void StripMenuExit_Click(object sender, EventArgs e)

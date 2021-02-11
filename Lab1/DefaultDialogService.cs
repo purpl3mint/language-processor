@@ -15,6 +15,8 @@ namespace Lab1
         public bool OpenFileDialog()
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 FilePath = openFileDialog.FileName;
@@ -26,6 +28,8 @@ namespace Lab1
         public bool SaveFileDialog()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 FilePath = saveFileDialog.FileName;

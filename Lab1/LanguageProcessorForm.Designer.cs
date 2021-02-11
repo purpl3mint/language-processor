@@ -1,6 +1,6 @@
 ﻿namespace Lab1
 {
-    partial class Form1
+    partial class LanguageProcessorForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LanguageProcessorForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuCreate = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,12 +73,13 @@
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.StatusStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -110,34 +111,34 @@
             // StripMenuCreate
             // 
             this.StripMenuCreate.Name = "StripMenuCreate";
-            this.StripMenuCreate.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuCreate.Size = new System.Drawing.Size(180, 22);
             this.StripMenuCreate.Text = "Создать";
             // 
             // StripMenuOpen
             // 
             this.StripMenuOpen.Name = "StripMenuOpen";
-            this.StripMenuOpen.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuOpen.Size = new System.Drawing.Size(180, 22);
             this.StripMenuOpen.Text = "Открыть";
             this.StripMenuOpen.Click += new System.EventHandler(this.StripMenuOpen_Click);
             // 
             // StripMenuSave
             // 
             this.StripMenuSave.Name = "StripMenuSave";
-            this.StripMenuSave.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuSave.Size = new System.Drawing.Size(180, 22);
             this.StripMenuSave.Text = "Сохранить";
             this.StripMenuSave.Click += new System.EventHandler(this.StripMenuSave_Click);
             // 
             // StripMenuSaveAs
             // 
             this.StripMenuSaveAs.Name = "StripMenuSaveAs";
-            this.StripMenuSaveAs.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuSaveAs.Size = new System.Drawing.Size(180, 22);
             this.StripMenuSaveAs.Text = "Сохранить как";
             this.StripMenuSaveAs.Click += new System.EventHandler(this.StripMenuSaveAs_Click);
             // 
             // StripMenuExit
             // 
             this.StripMenuExit.Name = "StripMenuExit";
-            this.StripMenuExit.Size = new System.Drawing.Size(154, 22);
+            this.StripMenuExit.Size = new System.Drawing.Size(180, 22);
             this.StripMenuExit.Text = "Выход";
             this.StripMenuExit.Click += new System.EventHandler(this.StripMenuExit_Click);
             // 
@@ -209,7 +210,7 @@
             this.списокЛитературыToolStripMenuItem,
             this.исходныйКодПрограммыToolStripMenuItem});
             this.текстToolStripMenuItem.Name = "текстToolStripMenuItem";
-            this.текстToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.текстToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.текстToolStripMenuItem.Text = "Текст";
             // 
             // постановкаЗадачиToolStripMenuItem
@@ -435,49 +436,55 @@
             this.textBox2.Size = new System.Drawing.Size(775, 160);
             this.textBox2.TabIndex = 3;
             // 
-            // statusStrip1
+            // toolStrip2
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1,
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 434);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
+            this.toolStripSeparator4,
+            this.StatusStripLabel1});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 431);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip2.TabIndex = 4;
+            this.toolStrip2.Text = "toolStrip2";
             // 
             // toolStripProgressBar1
             // 
-            this.toolStripProgressBar1.Margin = new System.Windows.Forms.Padding(11, 3, 1, 3);
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
-            this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
             this.toolStripProgressBar1.Value = 50;
             // 
-            // toolStripStatusLabel1
+            // toolStripSeparator4
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(78, 17);
-            this.toolStripStatusLabel1.Text = "Все работает";
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // Form1
+            // StatusStripLabel1
+            // 
+            this.StatusStripLabel1.Name = "StatusStripLabel1";
+            this.StatusStripLabel1.Size = new System.Drawing.Size(78, 22);
+            this.StatusStripLabel1.Text = "Все работает";
+            // 
+            // LanguageProcessorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 456);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "LanguageProcessorForm";
+            this.Text = "Language Processor";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,9 +536,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripLabel StatusStripLabel1;
     }
 }
 

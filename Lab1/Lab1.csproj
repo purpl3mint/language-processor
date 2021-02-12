@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StaticData.cs" />
     <Compile Include="DefaultDialogService.cs" />
     <Compile Include="DefaultFileService.cs" />
     <Compile Include="LanguageProcessorForm.cs">
@@ -64,6 +65,12 @@
     <Compile Include="IFileService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveBeforeCloseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveBeforeCloseForm.Designer.cs">
+      <DependentUpon>SaveBeforeCloseForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LanguageProcessorForm.resx">
       <DependentUpon>LanguageProcessorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +86,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SaveBeforeCloseForm.resx">
+      <DependentUpon>SaveBeforeCloseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -170,6 +170,27 @@ namespace Lab1
             var textBox = (TextBox)sender;
             StaticData.undoStack.Push(textBox.Text);
         }
+
+        //resize handlers
+        private void LanguageProcessorForm_SizeChanged(object sender, EventArgs e)
+        {
+            splitContainer1.Width = this.Width - 20;
+            textBox1.Width = this.Width - 45;
+            textBox2.Width = this.Width - 45;
+
+            splitContainer1.Height = this.Height - 130;
+
+        }
+
+        private void splitContainer1_Panel1_Resize(object sender, EventArgs e)
+        {
+            textBox1.Height = splitContainer1.Panel1.Height - 7;
+        }
+
+        private void splitContainer1_Panel2_Resize(object sender, EventArgs e)
+        {
+            textBox2.Height = splitContainer1.Panel2.Height - 7;
+        }
     }
 
 

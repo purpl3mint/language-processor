@@ -77,9 +77,14 @@
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.StatusStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -213,7 +218,7 @@
             // StripMenuDelete
             // 
             this.StripMenuDelete.Name = "StripMenuDelete";
-            this.StripMenuDelete.Size = new System.Drawing.Size(148, 22);
+            this.StripMenuDelete.Size = new System.Drawing.Size(190, 22);
             this.StripMenuDelete.Text = "Удалить";
             this.StripMenuDelete.Click += new System.EventHandler(this.StripMenuDelete_Click);
             // 
@@ -308,14 +313,14 @@
             // 
             this.StripMenuHelp.Name = "StripMenuHelp";
             this.StripMenuHelp.ShortcutKeyDisplayString = "F1";
-            this.StripMenuHelp.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuHelp.Size = new System.Drawing.Size(175, 22);
             this.StripMenuHelp.Text = "Вызов справки";
             this.StripMenuHelp.Click += new System.EventHandler(this.StripMenuHelp_Click);
             // 
             // StripMenuAbout
             // 
             this.StripMenuAbout.Name = "StripMenuAbout";
-            this.StripMenuAbout.Size = new System.Drawing.Size(156, 22);
+            this.StripMenuAbout.Size = new System.Drawing.Size(175, 22);
             this.StripMenuAbout.Text = "О программе";
             this.StripMenuAbout.Click += new System.EventHandler(this.StripMenuAbout_Click);
             // 
@@ -468,21 +473,23 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(11, 58);
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(775, 192);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(770, 178);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(11, 267);
+            this.textBox2.Location = new System.Drawing.Point(3, 3);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(775, 160);
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox2.Size = new System.Drawing.Size(770, 175);
             this.textBox2.TabIndex = 3;
             // 
             // toolStrip2
@@ -492,7 +499,7 @@
             this.toolStripProgressBar1,
             this.toolStripSeparator4,
             this.StatusStripLabel1});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 431);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 436);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(800, 25);
             this.toolStrip2.TabIndex = 4;
@@ -515,25 +522,52 @@
             this.StatusStripLabel1.Size = new System.Drawing.Size(78, 22);
             this.StatusStripLabel1.Text = "Все работает";
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(12, 58);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Resize += new System.EventHandler(this.splitContainer1_Panel1_Resize);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel2.Resize += new System.EventHandler(this.splitContainer1_Panel2_Resize);
+            this.splitContainer1.Size = new System.Drawing.Size(776, 369);
+            this.splitContainer1.SplitterDistance = 184;
+            this.splitContainer1.TabIndex = 5;
+            // 
             // LanguageProcessorForm
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 456);
+            this.ClientSize = new System.Drawing.Size(800, 461);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "LanguageProcessorForm";
             this.Text = "Language Processor";
+            this.SizeChanged += new System.EventHandler(this.LanguageProcessorForm_SizeChanged);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,6 +623,7 @@
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripLabel StatusStripLabel1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
 

@@ -111,35 +111,45 @@
             // StripMenuCreate
             // 
             this.StripMenuCreate.Name = "StripMenuCreate";
-            this.StripMenuCreate.Size = new System.Drawing.Size(153, 22);
+            this.StripMenuCreate.ShortcutKeyDisplayString = "";
+            this.StripMenuCreate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.StripMenuCreate.Size = new System.Drawing.Size(225, 22);
             this.StripMenuCreate.Text = "Создать";
             this.StripMenuCreate.Click += new System.EventHandler(this.StripMenuCreate_Click);
             // 
             // StripMenuOpen
             // 
             this.StripMenuOpen.Name = "StripMenuOpen";
-            this.StripMenuOpen.Size = new System.Drawing.Size(153, 22);
+            this.StripMenuOpen.ShortcutKeyDisplayString = "";
+            this.StripMenuOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.StripMenuOpen.Size = new System.Drawing.Size(225, 22);
             this.StripMenuOpen.Text = "Открыть";
             this.StripMenuOpen.Click += new System.EventHandler(this.StripMenuOpen_Click);
             // 
             // StripMenuSave
             // 
             this.StripMenuSave.Name = "StripMenuSave";
-            this.StripMenuSave.Size = new System.Drawing.Size(153, 22);
+            this.StripMenuSave.ShortcutKeyDisplayString = "";
+            this.StripMenuSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.StripMenuSave.Size = new System.Drawing.Size(225, 22);
             this.StripMenuSave.Text = "Сохранить";
             this.StripMenuSave.Click += new System.EventHandler(this.StripMenuSave_Click);
             // 
             // StripMenuSaveAs
             // 
             this.StripMenuSaveAs.Name = "StripMenuSaveAs";
-            this.StripMenuSaveAs.Size = new System.Drawing.Size(153, 22);
+            this.StripMenuSaveAs.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.StripMenuSaveAs.Size = new System.Drawing.Size(225, 22);
             this.StripMenuSaveAs.Text = "Сохранить как";
             this.StripMenuSaveAs.Click += new System.EventHandler(this.StripMenuSaveAs_Click);
             // 
             // StripMenuExit
             // 
             this.StripMenuExit.Name = "StripMenuExit";
-            this.StripMenuExit.Size = new System.Drawing.Size(153, 22);
+            this.StripMenuExit.ShortcutKeyDisplayString = "";
+            this.StripMenuExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.StripMenuExit.Size = new System.Drawing.Size(225, 22);
             this.StripMenuExit.Text = "Выход";
             this.StripMenuExit.Click += new System.EventHandler(this.StripMenuExit_Click);
             // 
@@ -160,35 +170,43 @@
             // StripMenuUndo
             // 
             this.StripMenuUndo.Name = "StripMenuUndo";
-            this.StripMenuUndo.Size = new System.Drawing.Size(148, 22);
+            this.StripMenuUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.StripMenuUndo.Size = new System.Drawing.Size(190, 22);
             this.StripMenuUndo.Text = "Отменить";
             this.StripMenuUndo.Click += new System.EventHandler(this.StripMenuUndo_Click);
             // 
             // StripMenuRedo
             // 
             this.StripMenuRedo.Name = "StripMenuRedo";
-            this.StripMenuRedo.Size = new System.Drawing.Size(148, 22);
+            this.StripMenuRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.StripMenuRedo.Size = new System.Drawing.Size(190, 22);
             this.StripMenuRedo.Text = "Повторить";
             this.StripMenuRedo.Click += new System.EventHandler(this.StripMenuRedo_Click);
             // 
             // StripMenuCut
             // 
             this.StripMenuCut.Name = "StripMenuCut";
-            this.StripMenuCut.Size = new System.Drawing.Size(148, 22);
+            this.StripMenuCut.ShortcutKeyDisplayString = "";
+            this.StripMenuCut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.StripMenuCut.Size = new System.Drawing.Size(190, 22);
             this.StripMenuCut.Text = "Вырезать";
             this.StripMenuCut.Click += new System.EventHandler(this.StripMenuCut_Click);
             // 
             // StripMenuCopy
             // 
             this.StripMenuCopy.Name = "StripMenuCopy";
-            this.StripMenuCopy.Size = new System.Drawing.Size(148, 22);
+            this.StripMenuCopy.ShortcutKeyDisplayString = "";
+            this.StripMenuCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.StripMenuCopy.Size = new System.Drawing.Size(190, 22);
             this.StripMenuCopy.Text = "Копировать";
             this.StripMenuCopy.Click += new System.EventHandler(this.StripMenuCopy_Click);
             // 
             // StripMenuPaste
             // 
             this.StripMenuPaste.Name = "StripMenuPaste";
-            this.StripMenuPaste.Size = new System.Drawing.Size(148, 22);
+            this.StripMenuPaste.ShortcutKeyDisplayString = "";
+            this.StripMenuPaste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.StripMenuPaste.Size = new System.Drawing.Size(190, 22);
             this.StripMenuPaste.Text = "Вставить";
             this.StripMenuPaste.Click += new System.EventHandler(this.StripMenuPaste_Click);
             // 
@@ -202,7 +220,9 @@
             // StripMenuSelectAll
             // 
             this.StripMenuSelectAll.Name = "StripMenuSelectAll";
-            this.StripMenuSelectAll.Size = new System.Drawing.Size(148, 22);
+            this.StripMenuSelectAll.ShortcutKeyDisplayString = "";
+            this.StripMenuSelectAll.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.StripMenuSelectAll.Size = new System.Drawing.Size(190, 22);
             this.StripMenuSelectAll.Text = "Выделить все";
             this.StripMenuSelectAll.Click += new System.EventHandler(this.StripMenuSelectAll_Click);
             // 
@@ -287,7 +307,8 @@
             // StripMenuHelp
             // 
             this.StripMenuHelp.Name = "StripMenuHelp";
-            this.StripMenuHelp.Size = new System.Drawing.Size(156, 22);
+            this.StripMenuHelp.ShortcutKeyDisplayString = "F1";
+            this.StripMenuHelp.Size = new System.Drawing.Size(180, 22);
             this.StripMenuHelp.Text = "Вызов справки";
             this.StripMenuHelp.Click += new System.EventHandler(this.StripMenuHelp_Click);
             // 

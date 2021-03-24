@@ -14,14 +14,14 @@ namespace Lab1
         {
             if (StaticData.unsaved)
             {
-                StaticData.currentData = StaticData.mainForm.TextBox.Text;
+                StaticData.currentData = StaticData.mainForm.InputTextBox.Text;
                 var saveBeforeCloseWindow = new SaveBeforeCloseForm();
                 saveBeforeCloseWindow.ShowDialog();
             }
 
             StaticData.dialogService.FilePath = "";
             StaticData.currentData = "";
-            StaticData.mainForm.TextBox.Text = StaticData.currentData;
+            StaticData.mainForm.InputTextBox.Text = StaticData.currentData;
             StaticData.mainForm.Heading = "Language Processor - unnamed";
         }
 
@@ -29,7 +29,7 @@ namespace Lab1
         {
             if (StaticData.unsaved)
             {
-                StaticData.currentData = StaticData.mainForm.TextBox.Text;
+                StaticData.currentData = StaticData.mainForm.InputTextBox.Text;
                 var saveBeforeCloseWindow = new SaveBeforeCloseForm();
                 saveBeforeCloseWindow.ShowDialog();
             }
@@ -37,7 +37,7 @@ namespace Lab1
             StaticData.dialogService.OpenFileDialog();
             StaticData.currentData = StaticData.fileService.ReadFile(StaticData.dialogService.FilePath);
 
-            StaticData.mainForm.TextBox.Text = StaticData.currentData;
+            StaticData.mainForm.InputTextBox.Text = StaticData.currentData;
 
             StaticData.mainForm.Heading = "Language Processor";
             if (StaticData.dialogService.FilePath != null || StaticData.dialogService.FilePath != "")
@@ -50,7 +50,7 @@ namespace Lab1
 
         public void CommandSave()
         {
-            StaticData.currentData = StaticData.mainForm.TextBox.Text;
+            StaticData.currentData = StaticData.mainForm.InputTextBox.Text;
 
             if (StaticData.dialogService.FilePath == null)
             {
@@ -68,7 +68,7 @@ namespace Lab1
 
         public void CommandSaveAs()
         {
-            StaticData.currentData = StaticData.mainForm.TextBox.Text;
+            StaticData.currentData = StaticData.mainForm.InputTextBox.Text;
             StaticData.dialogService.SaveFileDialog();
             StaticData.fileService.SaveFile(StaticData.dialogService.FilePath, StaticData.currentData);
             StaticData.mainForm.Heading = "Language Processor - " + StaticData.dialogService.FilePath;
@@ -79,9 +79,9 @@ namespace Lab1
         {
             if (StaticData.undoStack.Count > 0)
             {
-                StaticData.redoStack.Push(StaticData.mainForm.TextBox.Text);
+                StaticData.redoStack.Push(StaticData.mainForm.InputTextBox.Text);
                 string newValue = StaticData.undoStack.Pop();
-                StaticData.mainForm.TextBox.Text = newValue;
+                StaticData.mainForm.InputTextBox.Text = newValue;
             }
         }
 
@@ -89,45 +89,45 @@ namespace Lab1
         {
             if (StaticData.redoStack.Count > 0)
             {
-                StaticData.undoStack.Push(StaticData.mainForm.TextBox.Text);
+                StaticData.undoStack.Push(StaticData.mainForm.InputTextBox.Text);
                 string newValue = StaticData.redoStack.Pop();
-                StaticData.mainForm.TextBox.Text = newValue;
+                StaticData.mainForm.InputTextBox.Text = newValue;
             }
         }
 
         public void CommandCopy()
         {
-            if (StaticData.mainForm.TextBox.SelectionLength > 0)
-                StaticData.mainForm.TextBox.Copy();
+            if (StaticData.mainForm.InputTextBox.SelectionLength > 0)
+                StaticData.mainForm.InputTextBox.Copy();
         }
         public void CommandPaste()
         {
             if (Clipboard.GetDataObject().GetDataPresent(DataFormats.Text) == true)
             {
-                if (StaticData.mainForm.TextBox.SelectionLength > 0)
+                if (StaticData.mainForm.InputTextBox.SelectionLength > 0)
                 {
-                    StaticData.mainForm.TextBox.SelectionStart = StaticData.mainForm.TextBox.SelectionStart + StaticData.mainForm.TextBox.SelectionLength;
+                    StaticData.mainForm.InputTextBox.SelectionStart = StaticData.mainForm.InputTextBox.SelectionStart + StaticData.mainForm.InputTextBox.SelectionLength;
                 }
-                StaticData.mainForm.TextBox.Paste();
+                StaticData.mainForm.InputTextBox.Paste();
             }
         }
 
         public void CommandCut()
         {
-            if (StaticData.mainForm.TextBox.SelectedText != "")
-                StaticData.mainForm.TextBox.Cut();
+            if (StaticData.mainForm.InputTextBox.SelectedText != "")
+                StaticData.mainForm.InputTextBox.Cut();
         }
 
         public void CommandDelete()
         {
-            int StartPosDel = StaticData.mainForm.TextBox.SelectionStart;
-            int LenSelection = StaticData.mainForm.TextBox.SelectionLength;
-            StaticData.mainForm.TextBox.Text = StaticData.mainForm.TextBox.Text.Remove(StartPosDel, LenSelection);
+            int StartPosDel = StaticData.mainForm.InputTextBox.SelectionStart;
+            int LenSelection = StaticData.mainForm.InputTextBox.SelectionLength;
+            StaticData.mainForm.InputTextBox.Text = StaticData.mainForm.InputTextBox.Text.Remove(StartPosDel, LenSelection);
         }
 
         public void CommandSelectAll()
         {
-            StaticData.mainForm.TextBox.SelectAll();
+            StaticData.mainForm.InputTextBox.SelectAll();
         }
 
         public void CommandHelp()

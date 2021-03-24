@@ -14,7 +14,7 @@ namespace Lab1
     public partial class LanguageProcessorForm : Form
     {
         //wrappers for elements of form
-        public System.Windows.Forms.TextBox TextBox
+        public System.Windows.Forms.TextBox InputTextBox
         {
             get { return this.textBox1; }
             set { textBox1.Text = value.Text; }

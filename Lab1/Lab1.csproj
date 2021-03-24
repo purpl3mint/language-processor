@@ -103,8 +103,33 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="icons\" />
+    <Content Include="heeelp\file.png" />
+    <Content Include="heeelp\help1.html" />
+    <Content Include="heeelp\panel.png" />
+    <Content Include="heeelp\pravka.png" />
+    <Content Include="heeelp\spravka.png" />
+    <Content Include="heeelp\start.png" />
+    <Content Include="heeelp\text.png" />
+    <Content Include="icons\ahead_forward_arrow_icon_179127.png" />
+    <Content Include="icons\back_arrow_undo_icon_179126.png" />
+    <Content Include="icons\copy.png" />
+    <Content Include="icons\copy_duplicate_icon_179169.png" />
+    <Content Include="icons\cut.png" />
+    <Content Include="icons\cut_scissors_icon_179058.png" />
+    <Content Include="icons\help.png" />
+    <Content Include="icons\logo.ico" />
+    <Content Include="icons\logo_src.jpg" />
+    <Content Include="icons\new.png" />
+    <Content Include="icons\openFile.png" />
+    <Content Include="icons\paper_document_notebook_notes_icon_179403.png" />
+    <Content Include="icons\paste.png" />
+    <Content Include="icons\play.png" />
+    <Content Include="icons\play_icon_179196.png" />
+    <Content Include="icons\redo.png" />
+    <Content Include="icons\saveFile.png" />
+    <Content Include="icons\undo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

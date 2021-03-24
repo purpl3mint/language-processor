@@ -313,14 +313,15 @@
             // 
             this.StripMenuHelp.Name = "StripMenuHelp";
             this.StripMenuHelp.ShortcutKeyDisplayString = "F1";
-            this.StripMenuHelp.Size = new System.Drawing.Size(175, 22);
+            this.StripMenuHelp.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.StripMenuHelp.Size = new System.Drawing.Size(180, 22);
             this.StripMenuHelp.Text = "Вызов справки";
             this.StripMenuHelp.Click += new System.EventHandler(this.StripMenuHelp_Click);
             // 
             // StripMenuAbout
             // 
             this.StripMenuAbout.Name = "StripMenuAbout";
-            this.StripMenuAbout.Size = new System.Drawing.Size(175, 22);
+            this.StripMenuAbout.Size = new System.Drawing.Size(180, 22);
             this.StripMenuAbout.Text = "О программе";
             this.StripMenuAbout.Click += new System.EventHandler(this.StripMenuAbout_Click);
             // 

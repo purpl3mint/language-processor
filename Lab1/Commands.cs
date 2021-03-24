@@ -132,7 +132,7 @@ namespace Lab1
 
         public void CommandHelp()
         {
-            Help.ShowHelp(null, "Help.chm");
+            Help.ShowHelp(null, "../../heeelp/help1.html");
         }
     }
 }

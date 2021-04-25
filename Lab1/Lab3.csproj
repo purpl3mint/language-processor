@@ -12,21 +12,6 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -119,16 +104,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <Folder Include="icons\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="heeelp\file.png" />
@@ -138,24 +114,8 @@
     <Content Include="heeelp\spravka.png" />
     <Content Include="heeelp\start.png" />
     <Content Include="heeelp\text.png" />
-    <Content Include="icons\ahead_forward_arrow_icon_179127.png" />
-    <Content Include="icons\back_arrow_undo_icon_179126.png" />
-    <Content Include="icons\copy.png" />
-    <Content Include="icons\copy_duplicate_icon_179169.png" />
-    <Content Include="icons\cut.png" />
-    <Content Include="icons\cut_scissors_icon_179058.png" />
-    <Content Include="icons\help.png" />
-    <Content Include="icons\logo.ico" />
-    <Content Include="icons\logo_src.jpg" />
-    <Content Include="icons\new.png" />
-    <Content Include="icons\openFile.png" />
-    <Content Include="icons\paper_document_notebook_notes_icon_179403.png" />
-    <Content Include="icons\paste.png" />
-    <Content Include="icons\play.png" />
-    <Content Include="icons\play_icon_179196.png" />
-    <Content Include="icons\redo.png" />
-    <Content Include="icons\saveFile.png" />
-    <Content Include="icons\undo.png" />
+    <Content Include="task\images\automata.png" />
+    <Content Include="task\images\automata.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

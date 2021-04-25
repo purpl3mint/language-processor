@@ -14,10 +14,16 @@ namespace Lab1
     public partial class LanguageProcessorForm : Form
     {
         //wrappers for elements of form
-        public System.Windows.Forms.TextBox InputTextBox
+        public System.Windows.Forms.TextBox TextBox
         {
             get { return this.textBox1; }
             set { textBox1.Text = value.Text; }
+        }
+
+        public System.Windows.Forms.TextBox ResultsTextBox
+        {
+            get { return this.textBox2; }
+            set { textBox2.Text = value.Text; }
         }
 
         public string Heading
@@ -190,6 +196,21 @@ namespace Lab1
         private void splitContainer1_Panel2_Resize(object sender, EventArgs e)
         {
             textBox2.Height = splitContainer1.Panel2.Height - 7;
+        }
+
+        private void ToolStripPlay_Click(object sender, EventArgs e)
+        {
+            StaticData.commands.CommandCheck();
+        }
+
+        private void TaskStatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(null, "../../task/states.html");
+        }
+
+        private void TaskTransitionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(null, "../../task/transitions.html");
         }
     }
 

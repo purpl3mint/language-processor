@@ -57,6 +57,9 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.StripMenuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.заданиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TaskStatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TaskTransitionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripCreate = new System.Windows.Forms.ToolStripButton();
             this.toolStripOpen = new System.Windows.Forms.ToolStripButton();
@@ -94,7 +97,8 @@
             this.StripMenuEdit,
             this.текстToolStripMenuItem,
             this.пускToolStripMenuItem,
-            this.справкаToolStripMenuItem});
+            this.справкаToolStripMenuItem,
+            this.заданиеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -314,16 +318,39 @@
             this.StripMenuHelp.Name = "StripMenuHelp";
             this.StripMenuHelp.ShortcutKeyDisplayString = "F1";
             this.StripMenuHelp.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.StripMenuHelp.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuHelp.Size = new System.Drawing.Size(175, 22);
             this.StripMenuHelp.Text = "Вызов справки";
             this.StripMenuHelp.Click += new System.EventHandler(this.StripMenuHelp_Click);
             // 
             // StripMenuAbout
             // 
             this.StripMenuAbout.Name = "StripMenuAbout";
-            this.StripMenuAbout.Size = new System.Drawing.Size(180, 22);
+            this.StripMenuAbout.Size = new System.Drawing.Size(175, 22);
             this.StripMenuAbout.Text = "О программе";
             this.StripMenuAbout.Click += new System.EventHandler(this.StripMenuAbout_Click);
+            // 
+            // заданиеToolStripMenuItem
+            // 
+            this.заданиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TaskStatesToolStripMenuItem,
+            this.TaskTransitionsToolStripMenuItem});
+            this.заданиеToolStripMenuItem.Name = "заданиеToolStripMenuItem";
+            this.заданиеToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.заданиеToolStripMenuItem.Text = "Задание";
+            // 
+            // TaskStatesToolStripMenuItem
+            // 
+            this.TaskStatesToolStripMenuItem.Name = "TaskStatesToolStripMenuItem";
+            this.TaskStatesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.TaskStatesToolStripMenuItem.Text = "Множество состояний";
+            this.TaskStatesToolStripMenuItem.Click += new System.EventHandler(this.TaskStatesToolStripMenuItem_Click);
+            // 
+            // TaskTransitionsToolStripMenuItem
+            // 
+            this.TaskTransitionsToolStripMenuItem.Name = "TaskTransitionsToolStripMenuItem";
+            this.TaskTransitionsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.TaskTransitionsToolStripMenuItem.Text = "Функция переходов";
+            this.TaskTransitionsToolStripMenuItem.Click += new System.EventHandler(this.TaskTransitionsToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -455,6 +482,7 @@
             this.toolStripPlay.Name = "toolStripPlay";
             this.toolStripPlay.Size = new System.Drawing.Size(28, 28);
             this.toolStripPlay.Text = "Play";
+            this.toolStripPlay.Click += new System.EventHandler(this.ToolStripPlay_Click);
             // 
             // toolStripSeparator3
             // 
@@ -625,6 +653,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripLabel StatusStripLabel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ToolStripMenuItem заданиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TaskStatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TaskTransitionsToolStripMenuItem;
     }
 }
 
